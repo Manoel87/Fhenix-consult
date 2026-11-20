@@ -203,6 +203,16 @@ h2{font-size:clamp(1.5rem,1.1rem + 1.6vw,2.5rem);font-weight:800;letter-spacing:
 .sbtn:hover,.sbtn:focus-visible,.svc:hover .sbtn{background:var(--gd)}
 @media(min-width:1024px){.svc{padding:30px}.svl.two{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 20px}}
 
+/* atuação em campo (carrossel com fotos de proporções mistas) */
+.field{background:#fff}
+.svtop.rev .car-frame{aspect-ratio:4/3}
+.field .head p+p{margin-top:24px}
+.car.fit .car-slide{background:#18181B}
+.car.fit .car-slide::before{content:"";position:absolute;inset:-24px;background:var(--bg) center/cover no-repeat;filter:blur(22px) brightness(.6) saturate(1.1)}
+.car.fit .car-slide img{position:relative;object-fit:contain;object-position:center;filter:none}
+@media(min-width:640px){.svtop.rev .car-frame{aspect-ratio:16/10}}
+@media(min-width:1024px){.svtop.rev{grid-template-columns:minmax(0,.9fr) minmax(0,1fr)}.svtop.rev .car-frame{aspect-ratio:4/3}}
+
 /* =========================================================
    NÚMEROS
    ========================================================= */
@@ -308,6 +318,17 @@ textarea{min-height:110px;resize:vertical}
 .opt.flash{animation:ofl .9s ease 2}
 @keyframes ofl{50%{background:#BBF7D0}}
 
+/* endereço / mapa */
+.where{border-top:1px solid var(--line);margin-top:26px;padding-top:22px;display:grid;gap:14px;justify-items:start}
+.where h3{font-size:1.1rem}
+.where .addr{display:flex;gap:10px;align-items:flex-start;color:var(--mut);line-height:1.5;transition:color .2s}
+.where .addr .fic{flex:none;color:var(--g);margin-top:3px}
+.where .addr:hover,.where .addr:focus-visible{color:var(--g)}
+.mapbox{width:100%;aspect-ratio:16/10;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.mapbox iframe{display:block;width:100%;height:100%;border:0}
+.btn.ghost-dark{background:transparent;color:var(--gd);border-color:var(--g);min-height:44px;padding:10px 22px;font-size:14px}
+.btn.ghost-dark:hover{background:var(--g);color:#fff}
+
 /* =========================================================
    RODAPÉ
    ========================================================= */
@@ -338,6 +359,12 @@ footer.ft a:hover,footer.ft a:focus-visible{color:#4ADE80}
 .fbar{margin-top:26px;padding-top:16px;padding-right:76px;border-top:1px solid rgba(255,255,255,.08);font-size:13px;color:#71717A}
 @media(min-width:640px){.fgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}.fbrand{grid-column:1/-1}}
 @media(min-width:1024px){footer.ft{padding:40px 0 24px}.fgrid{grid-template-columns:1.35fr 1fr 1.35fr;gap:40px}.fbrand{grid-column:auto}}
+
+/* empresa parceira */
+.fpart{margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+footer.ft .fpart h4{margin:0 0 14px}
+.fpart img{display:block;width:clamp(140px,44vw,170px);height:auto}
+@media(min-width:1024px){.fpart img{width:190px}}
 
 /* =========================================================
    WHATSAPP FLUTUANTE

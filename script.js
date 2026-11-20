@@ -146,6 +146,7 @@ f.onsubmit=function(e){
 
 // Carrosséis (swipe por touch, arrastar com mouse, setas e bolinhas)
 var reduceMotion=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.querySelectorAll(".car.fit .car-slide").forEach(function(s){var im=s.querySelector("img");if(im)s.style.setProperty("--bg","url('"+im.getAttribute("src")+"')")});
 document.querySelectorAll("[data-car]").forEach(function(car){
  var frame=car.querySelector(".car-frame"),track=car.querySelector(".car-track"),
  slides=car.querySelectorAll(".car-slide"),dots=car.querySelectorAll(".car-dots button"),
