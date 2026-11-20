@@ -1,7 +1,6 @@
-// WhatsApp da FHENIX: +55 (81) 9837-0934  →  DDI + DDD + número, só dígitos.
-// Se o WhatsApp não abrir a conversa, confira se o número é celular de 9 dígitos
-// (nesse caso seria 5581998370934) e ajuste apenas esta linha.
-var WA_NUMBER="558198370934";
+// WhatsApp da FHENIX: +55 (81) 99658-5557  →  DDI + DDD + número, só dígitos.
+// Se o WhatsApp não abrir a conversa, confira o número e ajuste apenas esta linha.
+var WA_NUMBER="5581996585557";
 function wa(t){return "https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(t)}
 function openWA(url){
  // abre no app (celular) ou no WhatsApp Web (computador); se o pop-up for bloqueado, navega na mesma aba
